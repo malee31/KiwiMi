@@ -1,22 +1,112 @@
 <DOCTYPE html>
+<html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>
       KiwiMi
     </title>
     <style>
-      html{
-        align: center;
+      body{
+        text-align: center;
         background-color: #725c01;
+      }
+      
+      #canv{
+        background-color: #0ead03;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .header {
+        display: inline-block;
+        position: fixed;
+        margin:
+      }
+      
+      .navbarAccess {
+        background-color: #0ead03;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari*/
+        transition-duration: 0.4s;
+        float: left;
+      }
+      
+      .navbarAccess:hover {
+        background-color: #0ead03;
+        color: white;
+      }
     </style>
   </head>
-  <body>
-    <p>
-      <h1>
-        Fruit or Bird?
-      </h1>
+    <button class="header navbarAccess">nav</button>
+    <h1 class="header">
+      KiwiMi
+    </h1>
+    <h2>
+      Bird or Fruit?
+    </h2>
+    
     <canvas id="canv">
       Error Canvas Broke
     </canvas>
-    <!--Hi-->
+    
+    
+    
+    <script>
+    	var canvas=document.getElementById("canv");
+      var c=canvas.getContext("2d");
+      var kiwi=new Image();
+      kiwi.src="https://vignette.wikia.nocookie.net/atlas-reactor/images/3/35/Rocket_Kiwi-Emblem.png/revision/latest/scale-to-width-down/768?cb=20170527090800";
+      var height=canv.height;
+      var kiwiY=100;
+      var up=false;
+      document.addEventListener("keydown", buttonPress);
+			document.addEventListener("keyup", lifted);
+      function drawer()
+      {
+        c.clearRect(canv.width-110, kiwiY-10, canv.width+10, kiwiY+85);
+        c.drawImage(kiwi, canv.width-30, kiwiY, 25, 25);
+      }
+      function changeY()
+      {
+				if(up)
+        {
+          kiwiY-=10;
+          if(kiwiY<0)
+          {
+            kiwiY=0;
+          }
+        }
+        else
+        {
+          kiwiY+=10;
+          if(kiwiY+25>height)
+          {
+            kiwiY=height-25;
+          }
+        }
+      }
+      function buttonPress(pressed)
+      {
+        if(pressed.keyCode==32)
+        {
+          up=true;
+        }
+      }
+      function lifted(lift)
+      {
+        if(lift.keyCode==32)
+        {
+          up=false;
+        }
+      }
+      setInterval(drawer,100);
+      setInterval(changeY,100);
+    </script>
   </body>
 </html>
