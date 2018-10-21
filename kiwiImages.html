@@ -1,45 +1,100 @@
-<!doctype html>
+<doctype html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   <style>
-    .photosize{
-      width: 500px;
+    * {
+    	box-sizing: border-box;
+		}
+
+		body {
+    	margin: 0;
+    	font-family: 'Acme', sans-serif;
+      background-image: url("https://www.workingforests.org/wp-content/uploads/2018/07/IMG_0695.jpg");
+		}
+    
+    .head {
+      text-align: center;
+      font-size: 500px;
     }
-    .blur:hover {
-      filter: blur(2px);
-      opacity: 0.8;
+    
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
+  
+    .column img{
+    	margin-top: 12px;
+    }
+    
+    img:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+		}
+    
+    img:hover {
+      transform: scale(1.1);
       transition-duration: 0.3s;
-}
+    }
+   
   </style>
 </head>
 
 <body>
-  <h1>Images</h1>
- 
-  <a href="https://samsamazinganimals.files.wordpress.com/2011/11/a-model-of-a-kiwi-bird-and-egg-new-plymouth.jpg" target="_blank">
-    <img class="photosize blur" src="https://samsamazinganimals.files.wordpress.com/2011/11/a-model-of-a-kiwi-bird-and-egg-new-plymouth.jpg" />
-  </a>
+  <div class="head">
+	  <h1>Images</h1>
+  </div>
+    
+  <div class="column">
+		<a href="https://blogs.scientificamerican.com/running-ponies/files/2013/05/little-spotted-kiwi.jpg" target="_blank">
+  	  <img src="https://blogs.scientificamerican.com/running-ponies/files/2013/05/little-spotted-kiwi.jpg" style="width:100%" />
+		</a>
+
+	  <a href="http://i.imgur.com/dj5bw1X.jpg" target="_blank">
+  	  <img src="http://i.imgur.com/dj5bw1X.jpg" style="width:100%" />
+  	</a>
+
+	  <a href="https://gdb.voanews.com/1F814D42-05F8-4F9E-85AD-42141CECE9FE_cx0_cy29_cw0_w1023_r1_s.jpg" target="_blank">
+  	  <img src="https://gdb.voanews.com/1F814D42-05F8-4F9E-85AD-42141CECE9FE_cx0_cy29_cw0_w1023_r1_s.jpg" style="width:100%" />
+  	</a>
+	
+	  <a href= "https://natgeo.imgix.net/factsheets/thumbnails/Kiwi_header.jpg?auto=compress,format&w=1024&h=560&fit=crop" target="_blank">
+  	  <img src="https://natgeo.imgix.net/factsheets/thumbnails/Kiwi_header.jpg?auto=compress,format&w=1024&h=560&fit=crop" style="width:100%" />
+  	</a>
+
+    <a href="https://samsamazinganimals.files.wordpress.com/2011/11/a-model-of-a-kiwi-bird-and-egg-new-plymouth.jpg" target="_blank">
+    	<img src="https://samsamazinganimals.files.wordpress.com/2011/11/a-model-of-a-kiwi-bird-and-egg-new-plymouth.jpg" style="width:100%" />
+  	</a>
+</div>
+
+  <div class="column">
+  	<a href="https://news4c.com/wp-content/uploads/2017/07/Kiwi-Birds-640x351.jpg" target="_blank">
+    	<img src="https://news4c.com/wp-content/uploads/2017/07/Kiwi-Birds-640x351.jpg" style="width:100%" />
+  	</a>
   
-  <a href="https://blogs.scientificamerican.com/running-ponies/files/2013/05/little-spotted-kiwi.jpg" target="_blank">
-    <img class="photosize blur" src="https://blogs.scientificamerican.com/running-ponies/files/2013/05/little-spotted-kiwi.jpg" />
-  </a>
+		<a href="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/2kiwibirdsar.jpg" target="_blank">
+    	<img src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/2kiwibirdsar.jpg" style="width:100%" />
+  	</a>
+  
+  	<a href="https://media.apnarm.net.au/media/images/2018/03/28/9-4195254-twb280318kiwi%20(2)_ct677x380.jpg" target="_blank">
+    	<img src="https://media.apnarm.net.au/media/images/2018/03/28/9-4195254-twb280318kiwi%20(2)_ct677x380.jpg" style="width:100%" />
+  	</a>
 
-  <a href="http://i.imgur.com/dj5bw1X.jpg" target="_blank">
-    <img class="photosize blur" src="http://i.imgur.com/dj5bw1X.jpg" />
-  </a>
+		<a href="http://www.traveller.com.au/content/dam/images/g/i/l/1/l/2/image.related.articleLeadwide.620x349.gil0jg.png/1438234711921.jpg" target="_blank">
+    	<img src="http://www.traveller.com.au/content/dam/images/g/i/l/1/l/2/image.related.articleLeadwide.620x349.gil0jg.png/1438234711921.jpg" style="width:100%" />
+  	</a>
+  
+		<a href="https://external-preview.redd.it/J1pc7bVt4vS72Y2mN9ErjtsEj-MwRXPm2ASjmR4ymF0.jpg?width=800&auto=webp&s=0273f4328fa301f87bf02a34f1076b08c138ea62" target="_blank">
+    	<img src="https://external-preview.redd.it/J1pc7bVt4vS72Y2mN9ErjtsEj-MwRXPm2ASjmR4ymF0.jpg?width=800&auto=webp&s=0273f4328fa301f87bf02a34f1076b08c138ea62" style="width:100%" />
+  	</a>
 
-  <a href="https://gdb.voanews.com/1F814D42-05F8-4F9E-85AD-42141CECE9FE_cx0_cy29_cw0_w1023_r1_s.jpg" target="_blank">
-    <img class="photosize blur" src="https://gdb.voanews.com/1F814D42-05F8-4F9E-85AD-42141CECE9FE_cx0_cy29_cw0_w1023_r1_s.jpg" />
-  </a>
-
-  <a href= "https://natgeo.imgix.net/factsheets/thumbnails/Kiwi_header.jpg?auto=compress,format&w=1024&h=560&fit=crop" target="_blank">
-    <img class="photosize  blur" src="https://natgeo.imgix.net/factsheets/thumbnails/Kiwi_header.jpg?auto=compress,format&w=1024&h=560&fit=crop" />
-  </a>
-
-  <a href="http://images6.fanpop.com/image/photos/40700000/Kiwi-Bird-kiwi-birds-40711724-640-351.jpg" target="_blank">
-    <img class="photosize  blur" src="http://images6.fanpop.com/image/photos/40700000/Kiwi-Bird-kiwi-birds-40711724-640-351.jpg" />
-  </a>
-
+		<a href="https://www.newshub.co.nz/home/new-zealand/2016/10/kiwi-meat-what-it-tastes-like/_jcr_content/par/image.dynimg.1280.q75.jpg/v1/WHITEKIWINZ.jpg" target="_blank">
+    	<img src="https://www.newshub.co.nz/home/new-zealand/2016/10/kiwi-meat-what-it-tastes-like/_jcr_content/par/image.dynimg.1280.q75.jpg/v1/WHITEKIWINZ.jpg" style="width:100%" />
+  	</a>
+	</div>
+  
 </body>
 </html>
 
