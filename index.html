@@ -86,6 +86,41 @@
         right: -50px;
       }
 */
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+      
     </style>
   </head>
   <body>
@@ -93,19 +128,29 @@
     <h1 id="titlehead" class="header">
       KiwiMi <i class="fas fa-kiwi-bird"></i>
     </h1>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+      </div>
+    </div>
     <button onclick="location.href='birdorfruitquiz.html';" class="btnAway">
       <span>Kiwi Quiz</span><i class="fas fa-kiwi-bird"></i>
     </button>
     <button onclick="location.href='kiwiImages.html';" class="btnAway">
       <span>Kiwimagine</span><i class="fas fa-images"></i>
     </button>
-    <button onclick="location.href='gameKiwi.html';" class="btnAway">
+    <button onclick="location.href='gameKiwi.html';" target="_blank" class="btnAway">
       <span>Save the Kiwis Game</span><i class="fas fa-gamepad"></i>
     </button>
     <button onclick="location.href='kiwiInfo.html';" class="btnAway">
       <span>Some Helpful Information</span><i class="fas fa-book"></i>
     </button>
-    <button onclick="location.href='https://www.kiwisforkiwi.org/donate/';" class="btnAway">
+    <button onclick="location.href='https://www.kiwisforkiwi.org/donate/';" target="_blank" class="btnAway">
       <span>Donate Here</span><i class="fas fa-piggy-bank"></i>
     </button>
   </body>
