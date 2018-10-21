@@ -79,10 +79,49 @@
     </canvas>
     
     <script>
+      //variables
     	var canvas=document.getElementById("canv");
       var c=canvas.getContext("2d");
       var spriteSizes=25;
-      //in range code
+      var maxBullets=3;
+      var bullet=new Image();
+      bullet.src="http://pngimg.com/uploads/bullets/bullets_PNG35596.png";
+      var bulletX=0, bulletY=0;
+      var kiwi=new Image();
+      kiwi.src="https://vignette.wikia.nocookie.net/atlas-reactor/images/3/35/Rocket_Kiwi-Emblem.png/revision/latest/scale-to-width-down/768?cb=20170527090800";
+      var height=canv.height;
+      var kiwiY=100;
+      var up=false;
+      var run;
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //keyboard press detectors
+      document.addEventListener("keydown", buttonPress);
+			document.addEventListener("keyup", lifted);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //Hitbox code
       function contact(x,y,wid,heig,x2,y2,wid2,heig2)
       {
         var xMax=x+wid;
@@ -109,19 +148,37 @@
         }
       }
       
-      //kiwi code
       
-      var kiwi=new Image();
-      kiwi.src="https://vignette.wikia.nocookie.net/atlas-reactor/images/3/35/Rocket_Kiwi-Emblem.png/revision/latest/scale-to-width-down/768?cb=20170527090800";
-      var height=canv.height;
-      var kiwiY=100;
-      var up=false;
-      document.addEventListener("keydown", buttonPress);
-			document.addEventListener("keyup", lifted);
-      function drawer()
+      
+      
+      //clear screen
+      function clear()
       {
         c.clearRect(canv.width-110, kiwiY-10, canv.width+10, kiwiY+85);
+        c.clearRect(bulletX-10,bulletY-10,bulletX+spriteSizes+10,bulletY+spriteSizes+10);
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //kiwi code
+      
+      function drawer()
+      {
+        clear();
         c.drawImage(kiwi, canv.width-30, kiwiY, spriteSizes, spriteSizes);
+        drawBull();
+        if(contact(canv.width-30,kiwiY,spriteSizes,spriteSizes,bulletX,bulletY,spriteSizes,spriteSizes))
+        {
+          newBull();
+          hit();
+        }
       }
       function changeY()
       {
@@ -157,9 +214,62 @@
           up=false;
         }
       }
-      setInterval(changeY,100);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       //projectile code
+      function newBull()
+      {
+        bulletY=Math.floor(Math.random()*height);
+        bulletX=0;
+      }
+      function drawBull()
+      {
+        bulletX+=4;
+        if(bulletX>canv.width)
+        {
+          //delete bullet
+          newBull();
+        }
+        c.drawImage(bullet,bulletX,bulletY,spriteSizes,spriteSizes);
+      }
+      
+      
+      
+      
+      //shot
+      function hit()
+      {
+        console.log("Rip lol");
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //start drawing and stuff
+      newBull();
+      run=setInterval(changeY,100);
+      
+      
+      
+      
+      
+      
+      
       
     </script>
   </body>
