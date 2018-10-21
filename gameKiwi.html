@@ -92,7 +92,6 @@
     <canvas id="canv">
       Error Canvas Broke
     </canvas>
-    
     <script>
       //variables
     	var canvas=document.getElementById("canv");
@@ -159,7 +158,7 @@
       }
       function changeY()
       {
-				if(up)
+	if(up)
         {
           kiwiY-=10;
           if(kiwiY<0)
@@ -218,7 +217,7 @@
         }
         for(var ii=0; ii<maxBullets; ii++)
         {
-          c.drawImage(bullet,bulletX,bulletY[ii],spriteSizes,spriteSizes);
+          c.drawImage(bullet,bulletX,bulletY[ii],spriteSizes*2,spriteSizes);
         }
       }
       //shot
