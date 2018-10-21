@@ -3,22 +3,22 @@
 	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="http://www.pngmart.com/files/1/Kiwi-Bird.png" sizes="16x16" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Mali|Permanent+Marker|Ubuntu+Condensed" rel="stylesheet">
+    <link rel="icon" href="img/Cropped-Kiwi-Bird.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Cuprum|Mali|Permanent+Marker|Ubuntu+Condensed" rel="stylesheet">
     <title>
       BorF Quiz
     </title>
     <style>
-	body{
-		background: linear-gradient(180deg, #725c01, #3b2408);
-		text-align: center;
-	}
+			body{
+				background: linear-gradient(180deg, #725c01, #3b2408);
+				text-align: center;
+			}
       .leadingQ{
 				text-align: center;
         font-family: 'Permanent Marker', cursive;
-				font-size: 30px;
+				font-size: 200%;
 				color: black;
-				background: linear-gradient(180deg, #35e710, #1e6b0d);
+				background: linear-gradient(180deg, #35e71080, #1e6b0d80);
 				height: 12%;
 				margin: 3%;
 				border-radius: 20px;
@@ -26,27 +26,64 @@
       }
       .introQ{
         font-family: 'Ubuntu condensed', sans-serif;
+				font-size: 30px;
       }
-      ul{
-        list-style: none;
-        margin-top: 20px;
-        font-family: 'Ubuntu condensed', sans-serif;
-      }
-      .quizA{
-        width: 60%;
-        height: 5%;
-        border: none;
-        border-radius: 20px;
+
+			form{
+				font-family: 'Cuprum', sans-serif;
+				font-size: 50px;
+				text-align: left;
 				margin: 5px;
-        color: black;
+				margin-left: 20px;
+				margin-top: 15px;
+			}
+
+			.quizQs{
+				margin-top: 100px;
+				padding: 20px;
+			}
+
+			.quizA{
+				font-size: 35px;
+				padding-left: 20px;
+			}
+
+			form input{
+				font-size: 30px;
+			}
+
+			div{
+				background: linear-gradient(90deg, #35e71050, #1e6b0d50);
+				margin: 10px;
+				border-radius: 20px;
+			}
+
+			#submit{
+				display: block;
+				margin: 20px 25% 40px 25%;
+				border-radius: 20px;
+				width: 50%;
+				height: 10%;
 				background-color: #0ead03;
-      }
-      .quizA:hover{
-				border: 2px solid #1e6b0d;
-				color: #0b3202;
-				opacity: 0.7;
-				background: linear-gradient(180deg, #35e710, #0ead03);
-      }
+				border: none;
+				font-family: 'Permanent Marker', cursive;
+				font-size: 30px;
+				color: black;
+			}
+
+			#submit:hover{
+				background: linear-gradient(80deg, red, purple);
+				color: white;
+			}
+
+			#urResults{
+				background-color: #0ead03;
+				border-radius: 20px;
+				margin-bottom: 100px;
+				font-family: 'ABeeZee', sans-serif;
+				font-size: 20px;
+				padding: 10px;
+			}
 
 			#end{
 				font-family: 'Permanent Marker', cursive;
@@ -57,53 +94,155 @@
   <body>
     <h2 class="leadingQ">It's time you learned something very important about yourself--what sort of Kiwi are you?</h2>
     <h3 class="introQ">Are you brown, furry, and round? Of course you are. But are you the bird or the fruit?</h3>
-    <ul class="quizQs">
-      <li><ul class="answerOptions">What is your favorite color?
-        <li class="aBird"><button class="quizA">Green</button></li>
-        <li class="aFruit"><button class="quizA">Brown</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">What do you like to eat?
-        <li class="aBird"><button class="quizA">Wormies</button></li>
-        <li class="aFruit"><button class="quizA">Seeds</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">Do you taste good?
-        <li class="aBird"><button class="quizA">No</button></li>
-        <li class="aFruit"><button class="quizA">Yes</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">Which part of a chicken do you like to eat?
-        <li class="aBird"><button class="quizA">Wings</button></li>
-          <li class="aFruit"><button class="quizA">Breast</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">Are you a...
-        <li class="aBird"><button class="quizA">Night Owl</button></li>
-        <li class="aFruit"><button class="quizA">Morning Bird</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">Do you like flowers?
-        <li class="aBird"><button class="quizA">No</button></li>
-        <li class="aFruit"><button class="quizA">Yes</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">Are you...
-        <li class="aBird"><button class="quizA">One of a kind</button></li>
-        <li class="aFruit"><button class="quizA">Basic</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">Can you sing?
-        <li class="aBird"><button class="quizA">I can shriek</button></li>
-        <li class="aFruit"><button class="quizA">Like an angel</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">How many people have you dated?
-        <li class="aBird"><button class="quizA">One, the love of my life</button></li>
-        <li class="aFruit"><button class="quizA">Too many to keep count</button></li>
-        <li><button class="quizA" class="quizA">Zero... )`:</button></li>
-        </ul></li>
-      <li><ul class="answerOptions">What are you afraid of?
-        <li class="aBird"><button class="quizA">Dogs</button></li>
-        <li class="aFruit"><button class="quizA">Bugs</button></li>
-        </ul></li>
-    </ul>
+  	<form action="kiwiQuiz.js" name="Kiwi Quiz" method="POST">
+			<div>
+				<span class="quizQs">What is your favorite color?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="color" value="green" onclick="addOne()">
+					Green
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="color" value="brown" onclick="minusOne()">
+					Brown
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">What do you like to eat?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="color" value="seeds" onclick="minusOne()">
+					Seeds
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="color" value="worms" onclick="addOne()">
+					Worms
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">Do you taste good?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="taste" value="yes"  onclick="minusOne()">
+					Yes
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="taste" value="no" onclick="addOne()">
+					No
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">Which part of a chicken do you like to eat?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="chicken" value="wings" onclick="addOne()">
+					Wings
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="chicken" value="breast" onclick="minusOne()">
+					Breast
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">Are you a...</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="sleepTime" value="night" onclick="minusOne()">
+					Morning Bird
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="sleepTime" value="morning" onclick="addOne()">
+					Night Owl
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">Do you like flowers?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="flowers" value="yes" onclick="minusOne()">
+					Yes
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="flowers" value="no" onclick="addOne()">
+					No
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">Are you...</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="specialness" value="unique" onclick="addOne()">
+					One of a kind
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="specialness" value="basic" onclick="minusOne()">
+					Basic
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">Can you sing?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="sing" value="shriek" onclick="addOne()">
+					I can shriek
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="sing" value="angelic" onclick="minusOne()">
+					Like an angel
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">How many people have you dated?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="dates" value="many" onclick="minusOne()">
+					Too many to count
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="dates" value="one" onclick="addOne()">
+					One, the love of my life
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name"dates" value="none">
+					Zero... )`:
+				</label></br>
+			</div>
+
+			<div>
+				<span class="quizQs">What are you afraid of?</span></br>
+				<label class="quizA">
+					<input type="checkbox" name="fear" value="dogs" onclick="addOne()">
+					Dogs
+				</label></br>
+				<label class="quizA">
+					<input type="checkbox" name="fear" value="bugs" onclick="minusOne()">
+					Bugs
+				</label></br>
+			</div>
+		</form>
+
+		<button id="submit" onclick="kiwiResults()">Submit</button>
+		<p id="urResults"></p>
+
     <script>
+			let kiwiCount = 0;
+			function addOne(){
+				kiwiCount++;
+			}
+			function minusOne(){
+				kiwiCount--;
+			}
+			function kiwiResults(){
+				if(kiwiCount>0){
+					console.log('You\'s a birdie!');
+					document.getElementById("urResults").innerHTML = "You're a kiwi BIRD!</br> You’re athletic but have very weak arms. People around you think you are warm and fuzzy and very fun to cuddle with. You have sharp instincts, and are always nominated to be the leader of your group. You are the mascot of your school.";
+				}else if(kiwiCount<0){
+					console.log('You be a fruit');
+					document.getElementById("urResults").innerHTML = "You're a kiwi FRUIT!</br> You’re well-rounded. When people first meet you, they think you are too sour. However, after becoming friends, you become very sweet. You maintain good relationships with your friends and help them get rid of toxic people.";
+				}else{
+					console.log('You\'re just a kiwi');
+					document.getElementById("urResults").innerHTML = "You're just a kiwi.";
+				}
+			}
     </script>
   </body>
-	<footer>
-		<p id="end">The End</p>
-	</footer>
 </html>
