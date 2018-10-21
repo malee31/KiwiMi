@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="http://www.pngmart.com/files/1/Kiwi-Bird.png" sizes="16x16" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Mali|Permanent+Marker|Ubuntu+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <title>
       KiwiMi
     </title>
@@ -49,7 +50,6 @@
         font-size: 300%;
         border: 5px solid #0ead03;
         background-color: #725c01;
-        opacity: 1;
         padding: 20px 50px;
         margin: 5px 5px;
         -webkit-transition-duration: 0.4s; /* Safari */
@@ -59,7 +59,37 @@
         background-color: #0ead03;
         color: white;
       }
-
+      .btnAway i{
+        visibility: hidden;
+      }
+      .btnAway:hover i{
+        visibility: visible;
+      }
+    /*  .btnAway{
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      .btnAway:after{
+        content: "\f535";
+        font-size: 50px;
+        color: #0ead03;
+        position: absolute;
+        opacity: 0;
+        top: 10px;
+        right: -50px;
+        transition: 0.5s;
+      }
+*/
+      .btnAway:hover span{
+        margin-right: 50px;
+      }
+/*
+      .btnAway:hover:after {
+        opacity: 1;
+        right: -50px;
+      }
+*/
     </style>
   </head>
   <body>
@@ -67,17 +97,20 @@
     <h1 id="titlehead" class="header">
       KiwiMi
     </h1>
-    <button href="birdorfruitquiz.html" class="btnAway">
-      Kiwi Quiz
+    <button onclick="location.href=birdorfruitquiz.html" class="btnAway">
+      <span>Kiwi Quiz</span><i class="fas fa-kiwi-bird"></i>
     </button>
-    <button href="gameKiwi.html" class="btnAway">
-      Kiwimagine
+    <button onclick="location.href='kiwiImages.html';" class="btnAway">
+      <span>Kiwimagine</span><i class="fas fa-images"></i>
     </button>
-    <button href="birdorfruitquiz.html" class="btnAway">
-      Save the Kiwis!
+    <button onclick="location.href='gameKiwi.html';" class="btnAway">
+      <span>Save the Kiwis Game</span><i class="fas fa-gamepad"></i>
     </button>
-    <button href="birdorfruitquiz.html" class="btnAway">
-      Some Helpful Information
+    <button onclick="location.href='tbd.html';" class="btnAway">
+      <span>Some Helpful Information</span><i class="fas fa-book"></i>
+    </button>
+    <button onclick="location.href='https://www.kiwisforkiwi.org/donate/';" class="btnAway">
+      <span>Donate Here</span><i class="fas fa-piggy-bank"></i>
     </button>
   </body>
 </html>
