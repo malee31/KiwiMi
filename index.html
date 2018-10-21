@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="http://www.pngmart.com/files/1/Kiwi-Bird.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Mali|Permanent+Marker|Ubuntu+Condensed" rel="stylesheet">
     <title>
       KiwiMi
     </title>
@@ -18,21 +20,24 @@
         height: 100%;
       }
       
-      .header {
-        display: inline-block;
-        position: fixed;
-        margin:
+      #titlehead{
+				color: white;
       }
       
-      .navbarAccess {
+      .header {
+        text-align: center;
+        font-family: 'Mali', cursive;
+      }
+      
+ /*     .navbarAccess {
+        width: 30px;
         background-color: #0ead03;
         border: none;
         color: white;
         padding: 16px 32px;
         text-align: center;
         font-size: 16px;
-        margin: 4px 2px;
-        -webkit-transition-duration: 0.4s; /* Safari*/
+        -webkit-transition-duration: 0.4s; /* Safari
         transition-duration: 0.4s;
         float: left;
       }
@@ -41,25 +46,71 @@
         background-color: #0ead03;
         color: white;
       }
+      */
+      .btnAway{
+        color: #0ead03;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 20px;
+        border: 2px solid #0ead03; 
+        background-color: #725c01;
+        padding: 10px 25px;
+        margin: 5px 5px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+      }
+      .btnAway:hover{
+        background-color: #0ead03;
+        color: white;
+      }
+      
     </style>
   </head>
-    <button class="header navbarAccess">nav</button>
-    <h1 class="header">
+  <body>
+    <!--<button class="header navbarAccess">nav</button>-->
+    <h1 id="titlehead" class="header">
       KiwiMi
     </h1>
-    <h2>
+    <button href="birdorfruitquiz.html" class="btnAway">
       Bird or Fruit?
-    </h2>
+    </button>
     
     <canvas id="canv">
       Error Canvas Broke
     </canvas>
     
-    
-    
     <script>
     	var canvas=document.getElementById("canv");
       var c=canvas.getContext("2d");
+      var spriteSizes=25;
+      //in range code
+      function contact(x,y,wid,heig,x2,y2,wid2,heig2)
+      {
+        var xMax=x+wid;
+        var yMax=y+heig;
+        var xMax2=x2+wid2;
+        var yMax2=y2+heig2;
+        var inX=false;
+        var inY=false;
+        if((x2>=x&&x2<=xMax)||(xMax2>=x&&xMax2<=xMax))
+        {
+           inX=true;
+          if((y2>=y&&y2<=yMax)||(yMax2>=y&&yMax2<=yMax))
+      		{
+          	inY=true;
+        	}
+        }
+        if(inY&&inX)
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+      }
+      
+      //kiwi code
+      
       var kiwi=new Image();
       kiwi.src="https://vignette.wikia.nocookie.net/atlas-reactor/images/3/35/Rocket_Kiwi-Emblem.png/revision/latest/scale-to-width-down/768?cb=20170527090800";
       var height=canv.height;
@@ -70,7 +121,7 @@
       function drawer()
       {
         c.clearRect(canv.width-110, kiwiY-10, canv.width+10, kiwiY+85);
-        c.drawImage(kiwi, canv.width-30, kiwiY, 25, 25);
+        c.drawImage(kiwi, canv.width-30, kiwiY, spriteSizes, spriteSizes);
       }
       function changeY()
       {
@@ -85,9 +136,9 @@
         else
         {
           kiwiY+=10;
-          if(kiwiY+25>height)
+          if(kiwiY+spriteSizes>height)
           {
-            kiwiY=height-25;
+            kiwiY=height-spriteSizes;
           }
         }
       }
@@ -107,6 +158,14 @@
       }
       setInterval(drawer,100);
       setInterval(changeY,100);
+      
+      //projectile code
+      
+      function
     </script>
   </body>
+  <footer>
+      </br>
+      Image: https://vignette.wikia.nocookie.net/atlas-reactor/images/3/35/Rocket_Kiwi-Emblem.png/revision/latest/scale-to-width-down/768?cb=20170527090800
+  </footer>
 </html>
