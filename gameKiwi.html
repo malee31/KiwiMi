@@ -30,7 +30,7 @@
         text-align: center;
         font-family: 'Mali', cursive;
       }
-      
+
  /*     .navbarAccess {
         width: 30px;
         background-color: #0ead03;
@@ -49,17 +49,29 @@
         color: white;
       }
       */
-      .btnAway{
+      #center{
+        display:flex;
+        justify-content:center;
+      }
+      #btnAway{
         color: #0ead03;
         font-family: 'Permanent Marker', cursive;
         font-size: 20px;
-        border: 2px solid #0ead03; 
+        border-left: 2px solid #0ead03; 
+        border-right: 2px solid #0ead03; 
         background-color: #725c01;
-        padding: 10px 25px;
-        margin: 5px 5px;
+        padding-left: 10px 25px;\
+        padding-right: 10px 25px;
+        width:30%;
+        height:15%;
         -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        position:fixed;
+        top:50%;
+        z-index:2;
+        visibility:hidden;
       }
+
       .btnAway:hover{
         background-color: #0ead03;
         color: white;
@@ -72,10 +84,11 @@
     <h1 id="titlehead" class="header">
       KiwiMi
     </h1>
-    <button href="birdorfruitquiz.html" class="btnAway">
-      Bird or Fruit?
-    </button>
-    
+    <div align="center" id="center">
+      <button onclick="location.href='https://www.kiwisforkiwi.org/donate/';" id="btnAway">
+        Donate to Save the Kiwis!
+      </button>
+    </div>
     <canvas id="canv">
       Error Canvas Broke
     </canvas>
@@ -212,6 +225,7 @@
       {
         clearInterval(run);
         run=false;
+        document.getElementById("btnAway").style.visibility="visible";
       }
       //start drawing and stuff
       newBull();
