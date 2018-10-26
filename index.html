@@ -13,22 +13,23 @@
       body, html{
         height: 100%;
         margin: 0;
+        display: flex;
+        flex-direction: column;
       }
 
-      .homepage{
+      html{
         position: relative;
         height: 100%;
         background-image: url("https://i.pinimg.com/originals/79/28/0c/79280ce64217b0cdd53afb28bf8fd1ac.jpg");
+        background-repeat: repeat;
         background-attachment: fixed;
         background-position: center;
-        background-size: cover;
-        text-align: center;
         margin: 0;
       }
 
       #titlehead{
 				color: white;
-        font-size: 500%;
+        font-size: 5rem;
         margin-bottom: 3%;
       }
       .header {
@@ -36,15 +37,20 @@
         font-family: 'Mali', cursive;
       }
 
+      .navBtns{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
       .btnAway{
-        display: block;
         color: #0ead03;
         font-family: 'Permanent Marker', cursive;
-        font-size: 300%;
+        font-size: 3rem;
         border: 5px solid #0ead03;
         background-color: #725c01;
         width: 90%;
-        margin: 5%;
+        margin-bottom: 2%;
         padding-top: 10px;
         padding-bottom: 10px;
         -webkit-transition-duration: 0.4s; /* Safari */
@@ -61,24 +67,8 @@
       .btnAway:hover i{
         visibility: visible;
       }
-    /*  .btnAway{
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-      }
-      .btnAway:after{
-        content: "\f535";
-        font-size: 50px;
-        color: #0ead03;
-        position: absolute;
-        opacity: 0;
-        top: 10px;
-        right: -50px;
-        transition: 0.5s;
-      }
-*/
       .btnAway:hover span{
-        margin-right: 50px;
+        margin-right: 2.5rem;
       }
 /*
       .btnAway:hover:after {
@@ -130,7 +120,7 @@
     </style>
 </head>
 <body>
-  <div class="homepage">
+  <div class="homepage"> <!--useless-->
     <!--<button class="header navbarAccess">nav</button>-->
     <h1 id="titlehead" class="header">
       KiwiMi <i class="fas fa-kiwi-bird"></i>
@@ -145,21 +135,23 @@
         <a href="#">Donate!</a>
       </div>
       </div>-->
-      <button onclick="location.href='birdorfruitquiz.html';" class="btnAway">
-        <span>Kiwi Quiz</span><i class="fas fa-kiwi-bird"></i>
-      </button>
-      <button onclick="location.href='kiwiImages.html';" class="btnAway">
-        <span>Kiwimagine</span><i class="fas fa-images"></i>
-      </button>
-      <button onclick="location.href='gameKiwi.html';" target="_blank" class="btnAway">
-        <span>Save the Kiwis Game</span><i class="fas fa-gamepad"></i>
-      </button>
-      <button onclick="location.href='kiwiInfo.html';" class="btnAway">
-        <span>Some Helpful Information</span><i class="fas fa-book"></i>
-      </button>
-      <button onclick="location.href='https://www.kiwisforkiwi.org/donate/';" target="_blank" class="btnAway">
-        <span>Donate Here</span><i class="fas fa-piggy-bank"></i>
-      </button>
+      <div class="navBtns">
+        <button onclick="location.href='birdorfruitquiz.html';" class="btnAway">
+          <span>Kiwi Quiz</span><i class="fas fa-kiwi-bird"></i>
+        </button>
+        <button onclick="location.href='kiwiImages.html';" class="btnAway">
+          <span>Kiwimagine</span><i class="fas fa-images"></i>
+        </button>
+        <button onclick="location.href='gameKiwi.html';" target="_blank" class="btnAway">
+          <span>Save the Kiwis Game</span><i class="fas fa-gamepad"></i>
+        </button>
+        <button onclick="location.href='kiwiInfo.html';" class="btnAway">
+          <span>Some Helpful Information</span><i class="fas fa-book"></i>
+        </button>
+        <button onclick="location.href='https://www.kiwisforkiwi.org/donate/';" target="_blank" class="btnAway">
+          <span>Donate Here</span><i class="fas fa-piggy-bank"></i>
+        </button>
+      </div>
     </div>
   </body>
 </html>
